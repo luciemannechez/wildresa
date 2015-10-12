@@ -1,16 +1,16 @@
 <?php
 
 namespace Wcs\UsersBundle\Entity;
-
+use FOS\UserBundle\Model\User as BaseUser;
 /**
  * Users
  */
-class Users
+class Users extends BaseUser
 {
     /**
      * @var integer
      */
-    private $id;
+    protected $id;
 
 
     /**
@@ -21,6 +21,12 @@ class Users
     public function getId()
     {
         return $this->id;
+    }
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
     }
 }
 
