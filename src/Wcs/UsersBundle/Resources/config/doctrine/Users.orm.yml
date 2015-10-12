@@ -1,0 +1,11 @@
+Wcs\UsersBundle\Entity\Users:
+    type: entity
+    table: null
+    repositoryClass: Wcs\UsersBundle\Entity\UsersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
