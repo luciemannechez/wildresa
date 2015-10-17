@@ -1,3 +1,0 @@
-wcs_wild_resa_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: WcsWildResaBundle:Default:index }
