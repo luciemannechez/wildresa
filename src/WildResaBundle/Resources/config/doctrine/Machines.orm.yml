@@ -1,0 +1,16 @@
+WildResaBundle\Entity\Machines:
+    type: entity
+    table: null
+    repositoryClass: WildResaBundle\Entity\MachinesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        typeMachine:
+            type: string
+            length: 255
+            column: type_machine
+    lifecycleCallbacks: {  }
