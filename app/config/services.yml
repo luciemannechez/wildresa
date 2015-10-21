@@ -7,14 +7,6 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
-    sonata.admin.utilisateur:
-        class: Wcs\WildResaBundle\Admin\UtilisateursAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Liste des Utilisateurs", label: "Utilisateur" }
-        arguments:
-            - ~
-            - Wcs\WildResaBundle\Entity\Utilisateurs
-            - ~
 
     sonata.Wild.Machines:
             class: Wcs\WildResaBundle\Admin\MachinesWild
