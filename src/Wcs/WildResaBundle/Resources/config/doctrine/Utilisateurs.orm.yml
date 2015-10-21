@@ -1,0 +1,23 @@
+Wcs\WildResaBundle\Entity\Utilisateurs:
+    type: entity
+    table: null
+    repositoryClass: Wcs\WildResaBundle\Entity\UtilisateursRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: '20'
+        prenom:
+            type: string
+            length: '50'
+        email:
+            type: string
+            length: 255
+        numero:
+            type: float
+    lifecycleCallbacks: {  }
