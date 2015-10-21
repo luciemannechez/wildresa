@@ -40,5 +40,8 @@ sonata_user_profile:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
     prefix: /profile
 
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
