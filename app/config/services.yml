@@ -16,3 +16,11 @@ services:
                 - ~
                 - Wcs\WildResaBundle\Entity\Machines
                 - ~
+
+    wcs.wildresabundle.calendar_listener:
+        class: Wcs\WildResaBundle\EventListener\CalendarEventListener
+        arguments:
+            _type: service
+            _id: "doctrine.orm.entity_manager"
+        tags:
+            - { name: "kernel.event_listener", event: "calendar.load_events", method: loadEvents, id: "wcs.wildresabundle.calendar_listener" }
