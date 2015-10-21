@@ -39,3 +39,6 @@ sonata_user:
 sonata_user_profile:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
     prefix: /profile
+
+adesigns_calendar:
+    resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
