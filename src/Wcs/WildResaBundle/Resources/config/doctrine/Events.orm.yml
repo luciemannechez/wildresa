@@ -1,0 +1,16 @@
+Wcs\WildResaBundle\Entity\Events:
+    type: entity
+    table: null
+    repositoryClass: Wcs\WildResaBundle\Entity\EventsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        startDatetime:
+            type: datetime
+        endDatetime:
+            type: datetime
+    lifecycleCallbacks: {  }
