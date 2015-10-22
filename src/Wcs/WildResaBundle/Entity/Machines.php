@@ -52,4 +52,3 @@ class Machines
         return $this->typeMachine;
     }
 }
-

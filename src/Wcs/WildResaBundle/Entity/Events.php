@@ -7,6 +7,13 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class Events
 {
+
+
+
+
+    // YAML GENERATED CODE
+
+
     /**
      * @var integer
      */
@@ -15,17 +22,17 @@ class Events
     /**
      * @var \DateTime
      */
-    protected $eventDatetime;
+    private $event_datetime;
 
     /**
      * @var \DateTime
      */
-    protected $startDate;
+    private $startDate;
 
     /**
      * @var \DateTime
      */
-    protected $endDate;
+    private $endDate;
 
 
     /**
@@ -47,7 +54,7 @@ class Events
      */
     public function setEventDatetime($eventDatetime)
     {
-        $this->eventDatetime = $eventDatetime;
+        $this->event_datetime = $eventDatetime;
 
         return $this;
     }
@@ -59,7 +66,7 @@ class Events
      */
     public function getEventDatetime()
     {
-        return $this->eventDatetime;
+        return $this->event_datetime;
     }
 
     /**
@@ -110,4 +117,3 @@ class Events
         return $this->endDate;
     }
 }
-
