@@ -10,7 +10,7 @@
  *
  */
 
-namespace Sonata\UserBundle\Form\Type;
+namespace Application\Sonata\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,7 +18,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Sonata\UserBundle\Model\UserInterface;
 
-class ProfileType extends AbstractType
+class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
 {
     private $class;
 
@@ -58,22 +58,6 @@ class ProfileType extends AbstractType
                 'required' => false,
                 'widget'   => 'single_text'
             ))
-            ->add('website', 'url', array(
-                'label'    => 'form.label_website',
-                'required' => false,
-            ))
-            ->add('biography', 'textarea', array(
-                'label'    => 'form.label_biography',
-                'required' => false
-            ))
-            ->add('locale', 'locale', array(
-                'label'    => 'form.label_locale',
-                'required' => false
-            ))
-            ->add('timezone', 'timezone', array(
-                'label'    => 'form.label_timezone',
-                'required' => false
-            ))
             ->add('phone', null, array(
                 'label'    => 'form.label_phone',
                 'required' => false
@@ -96,6 +80,6 @@ class ProfileType extends AbstractType
      */
     public function getName()
     {
-        return 'sonata_user_profile';
+        return 'application_sonata_user_profile';
     }
 }

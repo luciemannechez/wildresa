@@ -105,7 +105,7 @@ sonata_user:
 
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               sonata_user_profile
+            type:               application_sonata_user_profile
             handler:            sonata.user.profile.form.handler.default
             name:               sonata_user_profile_form
             validation_groups:  [Profile]
@@ -115,7 +115,6 @@ fos_user:
     firewall_name:  main
     user_class:     Application\Sonata\UserBundle\Entity\User
 
-
     group:
         group_class:   Application\Sonata\UserBundle\Entity\Group
         group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
@@ -123,13 +122,6 @@ fos_user:
     service:
         user_manager: sonata.user.orm.user_manager
 
-
-    profile:  # Authentication Form
-        form:
-            type:               fos_user_profile
-            handler:            fos_user.profile.form.handler.default
-            name:               fos_user_profile_form
-            validation_groups:  [Authentication]
 mopa_bootstrap:
     form:
         show_legend: false # default is true
