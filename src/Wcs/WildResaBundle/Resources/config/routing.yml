@@ -3,6 +3,10 @@
 #   defaults: { _controller: WcsWildResaBundle:Default:index }
 #
 
+wcs_wild_resa_calendar:
+    path:     /calendar
+    defaults: { _controller: WcsWildResaBundle:Calendar:index }
+
 wcs_wild_resa_homepage:
     path:     /
-    defaults: { _controller: WcsWildResaBundle:Calendar:index }
+    defaults: { _controller: SonataUserBundle:SecurityFOSUser1:login }
