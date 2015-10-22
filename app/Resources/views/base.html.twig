@@ -22,12 +22,12 @@
                 <li><a href="{{ path('sonata_user_profile_edit') }}">Profile</a></li>
                 <li><a href="{{ path('wcs_wild_resa_calendar') }}">Calendar</a></li>
                 <li><a href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></li>
-
             {% else %}
                 <li><a href="{{ path('homepage') }}">WildResa</a></li>
             {% endif %}
             </ul>
         </header>
+
         <div class="container">
             <div class="row">
         {% block body %}
@@ -40,11 +40,13 @@
             <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
             <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-2.1.1.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-ui.custom.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/moment/moment.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar-lang-all.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
+            {% if app.request.get('_route') == 'wcs_wild_resa_calendar' %}
+                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-ui.custom.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/moment/moment.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar-lang-all.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
+            {% endif %}
         {% endblock %}
     </body>
 </html>
