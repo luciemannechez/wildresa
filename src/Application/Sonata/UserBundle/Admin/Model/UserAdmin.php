@@ -9,18 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Sonata\UserBundle\Admin\Model;
+namespace Application\Sonata\UserBundle\Admin\Model;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\UserBundle\Model\User;
 use Sonata\UserBundle\Model\UserInterface;
 
 use FOS\UserBundle\Model\UserManagerInterface;
 
-class UserAdmin extends Admin
+class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
 {
 
     /**
@@ -96,7 +97,20 @@ class UserAdmin extends Admin
                 ->add('username')
                 ->add('email')
             ->end()
-
+            ->with('Groups')
+                ->add('groups')
+            ->end()
+            ->with('Profile')
+                ->add('dateOfBirth')
+                ->add('firstname')
+                ->add('lastname')
+                ->add('gender')
+                ->add('phone')
+            ->end()
+            ->with('Security')
+                ->add('token')
+                ->add('twoStepVerificationCode')
+            ->end()
         ;
     }
 
@@ -113,7 +127,23 @@ class UserAdmin extends Admin
                     'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
                 ))
             ->end()
-
+            ->with('Groups')
+                ->add('groups', 'sonata_type_model', array(
+                    'required' => false,
+                    'expanded' => true,
+                    'multiple' => true
+                ))
+            ->end()
+            ->with('Profile')
+                ->add('dateOfBirth', 'birthday', array('required' => false))
+                ->add('firstname', null, array('required' => false))
+                ->add('lastname', null, array('required' => false))
+                ->add('gender', 'sonata_user_gender', array(
+                    'required' => true,
+                    'translation_domain' => $this->getTranslationDomain()
+                ))
+                ->add('phone', null, array('required' => false))
+            ->end()
         ;
 
         if ($this->getSubject() && !$this->getSubject()->hasRole('ROLE_SUPER_ADMIN')) {
