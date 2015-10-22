@@ -15,12 +15,17 @@ class Events
     /**
      * @var \DateTime
      */
-    protected $startDatetime;
+    protected $eventDatetime;
 
     /**
      * @var \DateTime
      */
-    protected $endDatetime;
+    protected $startDate;
+
+    /**
+     * @var \DateTime
+     */
+    protected $endDate;
 
 
     /**
@@ -34,51 +39,75 @@ class Events
     }
 
     /**
-     * Set startDatetime
+     * Set eventDatetime
      *
-     * @param \DateTime $startDatetime
+     * @param \DateTime $eventDatetime
      *
      * @return Events
      */
-    public function setStartDatetime($startDatetime)
+    public function setEventDatetime($eventDatetime)
     {
-        $this->startDatetime = $startDatetime;
+        $this->eventDatetime = $eventDatetime;
 
         return $this;
     }
 
     /**
-     * Get startDatetime
+     * Get eventDatetime
      *
      * @return \DateTime
      */
-    public function getStartDatetime()
+    public function getEventDatetime()
     {
-        return $this->startDatetime;
+        return $this->eventDatetime;
     }
 
     /**
-     * Set endDatetime
+     * Set startDate
      *
-     * @param \DateTime $endDatetime
+     * @param \DateTime $startDate
      *
      * @return Events
      */
-    public function setEndDatetime($endDatetime)
+    public function setStartDate($startDate)
     {
-        $this->endDatetime = $endDatetime;
+        $this->startDate = $startDate;
 
         return $this;
     }
 
     /**
-     * Get endDatetime
+     * Get startDate
      *
      * @return \DateTime
      */
-    public function getEndDatetime()
+    public function getStartDate()
     {
-        return $this->endDatetime;
+        return $this->startDate;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param \DateTime $endDate
+     *
+     * @return Events
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
     }
 }
 

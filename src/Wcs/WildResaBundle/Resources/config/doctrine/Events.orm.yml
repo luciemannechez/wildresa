@@ -9,8 +9,11 @@ Wcs\WildResaBundle\Entity\Events:
             generator:
                 strategy: AUTO
     fields:
-        startDatetime:
+        eventDatetime:
             type: datetime
-        endDatetime:
+            column: event_datetime
+        startDate:
+            type: datetime
+        endDate:
             type: datetime
     lifecycleCallbacks: {  }
