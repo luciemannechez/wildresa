@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Machine à laver{% endblock %}</title>
         {% block stylesheets %}
             <!-- Latest compiled and minified CSS -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -10,9 +10,9 @@
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/fullcalendar.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/style.css') }}"type="text/css"/>
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
     </head>
     <body>
         <header>
@@ -21,10 +21,13 @@
             {% endif %}
 
         </header>
-
+        <div class="container">
+            <div class="row">
         {% block body %}
 
         {% endblock %}
+            </div>
+        </div>
 
         {% block javascripts %}
             <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
