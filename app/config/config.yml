@@ -109,6 +109,9 @@ sonata_user:
             handler:            sonata.user.profile.form.handler.default
             name:               sonata_user_profile_form
             validation_groups:  [Profile]
+    admin:
+        user:
+            class:      Application\Sonata\UserBundle\Admin\Model\UserAdmin
 
 fos_user:
     db_driver:      orm # can be orm or odm
