@@ -9,7 +9,7 @@ Wcs\WildResaBundle\Entity\Events:
             generator:
                 strategy: AUTO
     fields:
-        eventDatetime:
+        event_datetime:
             type: datetime
             column: event_datetime
         startDate:
