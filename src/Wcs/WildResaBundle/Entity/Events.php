@@ -8,9 +8,6 @@ namespace Wcs\WildResaBundle\Entity;
 class Events
 {
 
-
-
-
     // YAML GENERATED CODE
 
 
