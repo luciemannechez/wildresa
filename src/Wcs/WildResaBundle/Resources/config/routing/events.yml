@@ -7,13 +7,13 @@ events_show:
     defaults: { _controller: "WcsWildResaBundle:Events:show" }
 
 events_new:
-    path:     /new
+    path:     /{start}/new
     defaults: { _controller: "WcsWildResaBundle:Events:new" }
 
 events_create:
     path:     /create
     defaults: { _controller: "WcsWildResaBundle:Events:create" }
-    methods:  POST
+    methods:  GET
 
 events_edit:
     path:     /{id}/edit

@@ -76,9 +76,10 @@ class EventsController extends Controller
      * Displays a form to create a new Events entity.
      *
      */
-    public function newAction()
+    public function newAction($start)
     {
         $entity = new Events();
+        $entity->setStart(new \DateTime($start));
         $form   = $this->createCreateForm($entity);
 
         return $this->render('WcsWildResaBundle:Events:new.html.twig', array(

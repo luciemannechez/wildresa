@@ -132,3 +132,6 @@ mopa_bootstrap:
         error_type: block # or inline which is default
     menu:
         template: MyBundles:Menu:template.html.twig
+
+fos_js_routing:
+    routes_to_expose: [ (.*) ]
