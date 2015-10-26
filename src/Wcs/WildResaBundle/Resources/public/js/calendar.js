@@ -3,13 +3,14 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
+            center: 'title'
         },
+        defaultView: 'agendaWeek',
+        timeFormat: 'H:mm',
 
         dayClick: function(date) {
-           // alert('Clicked on: ' + date.format());
-            window.location = Routing.generate('events') + date.format() + '%2000:00:00' + '/new';
+           //alert('Clicked on: ' + date.format());
+            window.location = Routing.generate('events') + date.format() + '/new';
         }
     });
 

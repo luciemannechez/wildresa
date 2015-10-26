@@ -13,7 +13,7 @@ events_new:
 events_create:
     path:     /create
     defaults: { _controller: "WcsWildResaBundle:Events:create" }
-    methods:  GET
+    methods:  POST
 
 events_edit:
     path:     /{id}/edit

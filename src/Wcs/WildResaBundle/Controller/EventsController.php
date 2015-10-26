@@ -80,6 +80,13 @@ class EventsController extends Controller
     {
         $entity = new Events();
         $entity->setStart(new \DateTime($start));
+
+        $startDate = new \DateTime($start);
+        $startDate->add(new \DateInterval("PT2H"));
+        $new_time = $startDate->format('Y-m-d H:m:s');
+
+        $entity->setEnd(new \DateTime($new_time));
+
         $form   = $this->createCreateForm($entity);
 
         return $this->render('WcsWildResaBundle:Events:new.html.twig', array(
