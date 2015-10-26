@@ -141,4 +141,8 @@ class Events
 
         return $this;
     }
+
+    public function __toString() {
+        return $this->machines;
+    }
 }

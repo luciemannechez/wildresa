@@ -1,8 +1,8 @@
 Wcs\WildResaBundle\Entity\Machines:
     type: entity
-    oneToMany:
+    manyToMany:
         events:
-            targetEntity: Wcs\WildResaBundle\Entity\Events
+            targetEntity: Events
             mappedBy: machines
 
     table: null

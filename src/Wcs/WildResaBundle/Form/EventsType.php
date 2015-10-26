@@ -5,6 +5,7 @@ namespace Wcs\WildResaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Wcs\WildResaBundle\Entity\Machines;
 
 class EventsType extends AbstractType
 {
@@ -19,7 +20,8 @@ class EventsType extends AbstractType
             ->add('end')
             ->add('machines', 'entity', array(
                 'class' => 'Wcs\WildResaBundle\Entity\Machines',
-                'choices' => $machines->getTypeMachine()
+                'expanded' => true,
+                'multiple' => true
             ));
         ;
     }
