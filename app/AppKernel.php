@@ -45,8 +45,6 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             //new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
-            new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

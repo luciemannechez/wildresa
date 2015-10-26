@@ -1,3 +1,7 @@
+wcs_wild_resa_events:
+    resource: "@WcsWildResaBundle/Resources/config/routing/events.yml"
+    prefix:   /events
+
 #Wcs_wild_resa_homepage:
 #   path:     /hello/{name}
 #   defaults: { _controller: WcsWildResaBundle:Default:index }

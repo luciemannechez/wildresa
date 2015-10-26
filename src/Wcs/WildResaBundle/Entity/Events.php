@@ -7,10 +7,7 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class Events
 {
-
-    // YAML GENERATED CODE
-
-
+   //
     /**
      * @var integer
      */
@@ -19,18 +16,25 @@ class Events
     /**
      * @var \DateTime
      */
-    private $event_datetime;
+    private $start;
 
     /**
      * @var \DateTime
      */
-    private $startDate;
+    private $end;
 
     /**
-     * @var \DateTime
+     * @var \Doctrine\Common\Collections\Collection
      */
-    private $endDate;
+    private $machines;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->machines = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -43,74 +47,98 @@ class Events
     }
 
     /**
-     * Set eventDatetime
+     * Set start
      *
-     * @param \DateTime $eventDatetime
+     * @param \DateTime $start
      *
      * @return Events
      */
-    public function setEventDatetime($eventDatetime)
+    public function setStart($start)
     {
-        $this->event_datetime = $eventDatetime;
+        $this->start = $start;
 
         return $this;
     }
 
     /**
-     * Get eventDatetime
+     * Get start
      *
      * @return \DateTime
      */
-    public function getEventDatetime()
+    public function getStart()
     {
-        return $this->event_datetime;
+        return $this->start;
     }
 
     /**
-     * Set startDate
+     * Set end
      *
-     * @param \DateTime $startDate
+     * @param \DateTime $end
      *
      * @return Events
      */
-    public function setStartDate($startDate)
+    public function setEnd($end)
     {
-        $this->startDate = $startDate;
+        $this->end = $end;
 
         return $this;
     }
 
     /**
-     * Get startDate
+     * Get end
      *
      * @return \DateTime
      */
-    public function getStartDate()
+    public function getEnd()
     {
-        return $this->startDate;
+        return $this->end;
     }
 
     /**
-     * Set endDate
+     * Add machine
      *
-     * @param \DateTime $endDate
+     * @param \Wcs\WildResaBundle\Entity\Machines $machine
      *
      * @return Events
      */
-    public function setEndDate($endDate)
+    public function addMachine(\Wcs\WildResaBundle\Entity\Machines $machine)
     {
-        $this->endDate = $endDate;
+        $this->machines[] = $machine;
 
         return $this;
     }
 
     /**
-     * Get endDate
+     * Remove machine
      *
-     * @return \DateTime
+     * @param \Wcs\WildResaBundle\Entity\Machines $machine
      */
-    public function getEndDate()
+    public function removeMachine(\Wcs\WildResaBundle\Entity\Machines $machine)
     {
-        return $this->endDate;
+        $this->machines->removeElement($machine);
+    }
+
+    /**
+     * Get machines
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMachines()
+    {
+        return $this->machines;
+    }
+
+    /**
+     * Set machines
+     *
+     * @param \Wcs\WildResaBundle\Entity\Machines $machines
+     *
+     * @return Events
+     */
+    public function setMachines(\Wcs\WildResaBundle\Entity\Machines $machines = null)
+    {
+        $this->machines = $machines;
+
+        return $this;
     }
 }

@@ -1,5 +1,12 @@
 Wcs\WildResaBundle\Entity\Events:
     type: entity
+    manyToOne:
+        machines:
+            targetEntity: Wcs\WildResaBundle\Entity\Machines
+            inversedBy: events
+            joinColumn:
+                name: type_machine
+                referencedColumnName: id
     table: null
     repositoryClass: Wcs\WildResaBundle\Entity\EventsRepository
     id:
@@ -9,11 +16,8 @@ Wcs\WildResaBundle\Entity\Events:
             generator:
                 strategy: AUTO
     fields:
-        event_datetime:
+        start:
             type: datetime
-            column: event_datetime
-        startDate:
-            type: datetime
-        endDate:
+        end:
             type: datetime
     lifecycleCallbacks: {  }

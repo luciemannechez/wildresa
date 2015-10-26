@@ -9,7 +9,7 @@
 
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/fullcalendar.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/fullcalendar.css') }}"type="text/css"/>
             <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/style.css') }}"type="text/css"/>
             <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% endblock %}
@@ -37,16 +37,9 @@
         </div>
 
         {% block javascripts %}
-            <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-            <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-2.1.1.min.js') }}"></script>
-            {% if app.request.get('_route') == 'wcs_wild_resa_calendar' %}
-                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-ui.custom.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/moment/moment.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/fullcalendar-lang-all.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
-            {% endif %}
+            <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
+            <script src="{{ asset('bundles/wcswildresa/js/moment.min.js') }}"></script>
+            <script src="{{ asset('bundles/wcswildresa/js/fullcalendar.js') }}"></script>
         {% endblock %}
     </body>
 </html>

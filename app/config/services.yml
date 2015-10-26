@@ -17,12 +17,6 @@ services:
             - Wcs\WildResaBundle\Entity\Machines
             - ~
 
-    wcs.wildresabundle.calendar_listener:
-        class: Wcs\WildResaBundle\EventListener\CalendarEventListener
-        arguments: [ "@doctrine.orm.entity_manager" ]
-        tags:
-            - { name: "kernel.event_listener", event: "calendar.load_events", method: loadEvents }
-
     sonata.user.profile.form.type:
         class: Application\Sonata\UserBundle\Form\Type\ProfileType
         arguments: [ "Application\Sonata\UserBundle\Entity\User" ]
