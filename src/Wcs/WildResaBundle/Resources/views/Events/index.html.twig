@@ -11,6 +11,7 @@
                 <th>End</th>
                 <th>User</th>
                 <th>Actions</th>
+                <th>Machine</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,12 @@
                 <td>{% if entity.start %}{{ entity.start|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.end %}{{ entity.end|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.user %}{{ entity.user }}{% endif %}</td>
+                {% set machines = entity.getMachines() %}
+                <td>
+                {% for machine in machines %}
+                    {{ machine }}<br/>
+                {% endfor %}
+                </td>
                 <td>
                 <ul>
                     <li>

@@ -21,6 +21,16 @@
                 <th>User</th>
                 <td>{{ entity.user }}</td>
             </tr>
+            {% set machines = entity.getMachines() %}
+            <tr>
+                <th>Machines</th>
+                <td>
+            {% for machine in machines %}
+                {{ machine }}<br/>
+            {% endfor %}
+                </td>
+            </tr>
+
         </tbody>
     </table>
 
