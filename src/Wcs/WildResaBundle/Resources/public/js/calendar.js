@@ -7,6 +7,9 @@ $(document).ready(function() {
         },
         defaultView: 'agendaWeek',
         timeFormat: 'H:mm',
+        allDaySlot: false,
+
+        events: Routing.generate('eventsjson'),
 
         dayClick: function(date) {
            //alert('Clicked on: ' + date.format());

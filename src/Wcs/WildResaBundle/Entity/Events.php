@@ -174,4 +174,5 @@ class Events
     {
         return $this->user;
     }
+
 }

@@ -22,3 +22,8 @@ services:
         arguments: [ "Application\Sonata\UserBundle\Entity\User" ]
         tags:
             - { name: "form.type", alias: "application_sonata_user_profile"}
+
+    get_set_method_normalizer:
+        class: Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer
+        tags:
+            - { name: serializer.normalizer }

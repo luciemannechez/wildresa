@@ -28,7 +28,8 @@
         "craue/formflow-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "~1.1",
         "adesigns/calendar-bundle": "1.2-beta",
-        "friendsofsymfony/jsrouting-bundle": "^1.5"
+        "friendsofsymfony/jsrouting-bundle": "^1.5",
+        "symfony/serializer": "^2.7"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
