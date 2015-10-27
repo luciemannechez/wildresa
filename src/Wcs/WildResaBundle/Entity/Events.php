@@ -7,7 +7,7 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class Events
 {
-   //
+
     /**
      * @var integer
      */
@@ -144,5 +144,34 @@ class Events
 
     public function __toString() {
         return $this->machines;
+    }
+    /**
+     * @var string
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param string $user
+     *
+     * @return Events
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

@@ -9,6 +9,7 @@
                 <th>Id</th>
                 <th>Start</th>
                 <th>End</th>
+                <th>User</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +19,7 @@
                 <td><a href="{{ path('events_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{% if entity.start %}{{ entity.start|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.end %}{{ entity.end|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.user %}{{ entity.user }}{% endif %}</td>
                 <td>
                 <ul>
                     <li>
@@ -32,4 +34,4 @@
         {% endfor %}
         </tbody>
     </table>
-    {% endblock %}
+{% endblock %}

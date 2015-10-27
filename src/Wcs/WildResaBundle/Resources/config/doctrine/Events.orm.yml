@@ -25,4 +25,6 @@ Wcs\WildResaBundle\Entity\Events:
             type: datetime
         end:
             type: datetime
+        user:
+            type: string
     lifecycleCallbacks: {  }

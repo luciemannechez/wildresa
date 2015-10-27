@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Wcs\WildResaBundle\Entity\Machines;
+use Application\Sonata\UserBundle\Entity\User;
 
 class EventsType extends AbstractType
 {
@@ -24,7 +25,7 @@ class EventsType extends AbstractType
                 'multiple' => true,
                 'required' => true
 
-            ));
+            ))
         ;
     }
     
