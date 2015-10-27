@@ -2,14 +2,11 @@
 
 namespace Wcs\WildResaBundle\Controller;
 
-use Doctrine\ORM\Id\BigIntegerIdentityGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Config\Definition\IntegerNode;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use JMS\Serializer\SerializerBuilder;
 
 
 class CalendarController extends Controller
