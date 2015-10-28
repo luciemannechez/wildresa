@@ -20,7 +20,7 @@ $(document).ready(function() {
             window.location = Routing.generate('events') + date.format() + '/new';
         },
 
-        eventClick: function(calEvent, jsEvent, view) {
+        eventClick: function(calEvent) {
             window.location = Routing.generate('events') + calEvent.id + '/edit';
         }
     });
