@@ -15,43 +15,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script>
-        $( document ).ready(function() {
-            var $checkboxes = $('input[type=checkbox]'),
-                $endDate = $('#wcs_wildresabundle_events_end_time_hour'),
-                $val = $endDate.val(),
-                $option = $endDate.find('option');
-
-            var $i = 0;
-            var isAdded = false;
-
-            $checkboxes.change(function() {
-                if(this.checked) {
-                    $i ++;
-                }
-                else {
-                    $i --;
-                }
-
-                if ( $i == 2 && !isAdded) {
-                    isAdded = true;
-                    $option.removeAttr('selected');
-
-                    var value = parseInt($val) + 2;
-                    $val = value.toString();
-
-                    $endDate.find('option[value='+value+']').attr('selected', 'selected');
-                    
-                }else if ($i == 1 && isAdded) {
-                    isAdded = false;
-                    $option.removeAttr('selected');
-
-                    var value = parseInt($val) - 2;
-                    $val = value.toString();
-
-                    $endDate.find('option[value='+value+']').attr('selected', 'selected');
-                }
-            });
-        });
-    </script>
+    <script src="{{ asset('bundles/wcswildresa/js/checkboxes.js') }}"></script>
 {% endblock %}
