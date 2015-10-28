@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Wcs\WildResaBundle\Entity\Events;
 
 
 class CalendarController extends Controller
@@ -23,7 +24,9 @@ class CalendarController extends Controller
         $entities = $em->getRepository('WcsWildResaBundle:Events')->findAll();
 
         $normalizer = new ObjectNormalizer();
+
         $normalizer->setIgnoredAttributes(array('machines'));
+
         $encoder = new JsonEncoder();
 
         $callback = function ($dateTime) {

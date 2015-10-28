@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/fullcalendar.css') }}"type="text/css"/>
         <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/style.css') }}"type="text/css"/>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
     {% endblock %}
 </head>
 <body>
@@ -40,7 +41,6 @@
 {% block javascripts %}
     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
-    <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
     <script src="{{ asset('bundles/wcswildresa/js/moment.min.js') }}"></script>
     <script src="{{ asset('bundles/wcswildresa/js/fullcalendar.js') }}"></script>
     <script src="{{ asset('bundles/wcswildresa/js/calendar.js') }}"></script>

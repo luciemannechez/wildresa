@@ -5,6 +5,10 @@ namespace Wcs\WildResaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\Validator\Constraints\IsTrueValidator;
+use Symfony\Component\Validator\Constraints\NotNull;
+use Symfony\Component\Validator\Constraints\True;
 use Wcs\WildResaBundle\Entity\Machines;
 use Application\Sonata\UserBundle\Entity\User;
 
@@ -17,13 +21,12 @@ class EventsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('start')
-            ->add('end')
+            ->add('start', 'datetime')
+            ->add('end', 'datetime', array( 'attr' => array('class' => 'endDate')))
             ->add('machines', 'entity', array(
                 'class' => 'Wcs\WildResaBundle\Entity\Machines',
-                'expanded' => true,
                 'multiple' => true,
-                'required' => true
+                'expanded' => true
             ))
         ;
     }
