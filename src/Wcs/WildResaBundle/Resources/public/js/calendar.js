@@ -16,8 +16,12 @@ $(document).ready(function() {
         events: Routing.generate('eventsjson'),
 
         dayClick: function(date) {
-           //alert('Clicked on: ' + date.format());
+            //alert('Clicked on: ' + date.format());
             window.location = Routing.generate('events') + date.format() + '/new';
+        },
+
+        eventClick: function(calEvent, jsEvent, view) {
+            window.location = Routing.generate('events') + calEvent.id + '/edit';
         }
     });
 

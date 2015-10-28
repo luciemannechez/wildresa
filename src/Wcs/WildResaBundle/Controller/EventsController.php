@@ -184,13 +184,13 @@ class EventsController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('events_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('wcs_wild_resa_calendar'));
         }
 
         return $this->render('WcsWildResaBundle:Events:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'delete_form' => $deleteForm->createView()
         ));
     }
     /**
@@ -214,7 +214,7 @@ class EventsController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('events'));
+        return $this->redirect($this->generateUrl('wcs_wild_resa_calendar'));
     }
 
     /**
