@@ -8,6 +8,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Wcs\WildResaBundle\Entity\Events;
+use Wcs\WildResaBundle\Entity\Machines;
 
 
 class CalendarController extends Controller
@@ -25,17 +26,25 @@ class CalendarController extends Controller
 
         $normalizer = new ObjectNormalizer();
 
-        $normalizer->setIgnoredAttributes(array('machines'));
-
         $encoder = new JsonEncoder();
 
-        $callback = function ($dateTime) {
+        $dateCallback = function ($dateTime) {
             return $dateTime instanceof \DateTime
                 ? $dateTime->format(\DateTime::ISO8601)
                 : '';
         };
 
-        $normalizer->setCallbacks(array('start' => $callback, 'end' => $callback));
+
+        $machineCallback = function ($machines) {
+            $result = [];
+            foreach ($machines as $mach)
+            {
+                $result[] = $mach->getTypeMachine();
+            }
+            return $result;
+        };
+
+        $normalizer->setCallbacks(array('start' => $dateCallback, 'end' => $dateCallback, 'machines' => $machineCallback));
 
         $serializer = new Serializer(array($normalizer), array($encoder));
         $jsonObject = $serializer->serialize($entities, 'json');

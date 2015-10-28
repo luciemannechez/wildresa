@@ -8,6 +8,10 @@ $(document).ready(function() {
         defaultView: 'agendaWeek',
         timeFormat: 'H:mm',
         allDaySlot: false,
+        slotEventOverlap: false,
+        firstDay: 1,
+        aspectRatio: 2,
+        eventOverlap: false,
 
         events: Routing.generate('eventsjson'),
 
