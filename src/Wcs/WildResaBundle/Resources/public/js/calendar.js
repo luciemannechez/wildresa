@@ -15,6 +15,18 @@ $(document).ready(function() {
 
         events: Routing.generate('eventsjson'),
 
+        eventRender: function(event, element) {
+            element.each(function() {
+                element.append(event.user + '<br/>');
+
+                var machines = event.machines;
+
+                for ( var i=0; i < machines.length; i ++ ) {
+                    element.append(machines[i] + '<br/>');
+                }
+            })
+        },
+
         dayClick: function(date) {
             //alert('Clicked on: ' + date.format());
             window.location = Routing.generate('events') + date.format() + '/new';
