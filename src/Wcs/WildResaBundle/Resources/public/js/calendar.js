@@ -35,9 +35,9 @@ $(document).ready(function() {
         },
 
         eventClick: function(calEvent) {
-            if ( $user == calEvent.user ) {
-                window.location = Routing.generate('events') + calEvent.id + '/edit';
-            }
+                if ($user == calEvent.user || $user == 'admin') {
+                    window.location = Routing.generate('events') + calEvent.id + '/edit';
+                }
         }
     });
 

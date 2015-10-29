@@ -162,6 +162,7 @@ class EventsController extends Controller
         $form->add('submit', 'submit', array('label' => 'Update'));
 
         return $form;
+        return $form;
     }
     /**
      * Edits an existing Events entity.
