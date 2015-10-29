@@ -11,10 +11,19 @@ services:
     sonata.Wild.Machines:
         class: Wcs\WildResaBundle\Admin\MachinesWild
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Liste des Machines", label: "Machine" }
+            - { name: sonata.admin, manager_type: orm, group: "Machines", label: "Machines" }
         arguments:
             - ~
             - Wcs\WildResaBundle\Entity\Machines
+            - ~
+
+    sonata.Wild.Events:
+        class: Wcs\WildResaBundle\Admin\EventsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Events", label: "Events" }
+        arguments:
+            - ~
+            - Wcs\WildResaBundle\Entity\Events
             - ~
 
     sonata.user.profile.form.type:
