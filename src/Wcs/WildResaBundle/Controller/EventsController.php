@@ -87,7 +87,7 @@ class EventsController extends Controller
 
         $startDate = new \DateTime($start);
         $startDate->add(new \DateInterval("PT2H"));
-        $new_time = $startDate->format('Y-m-d H:m:s');
+        $new_time = $startDate->format('Y-m-d H:i:s');
 
         $entity->setEnd(new \DateTime($new_time));
 
