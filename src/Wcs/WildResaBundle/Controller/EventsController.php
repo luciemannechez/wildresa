@@ -48,7 +48,7 @@ class EventsController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('events_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('wcs_wild_resa_calendar'));
         }
 
         return $this->render('WcsWildResaBundle:Events:new.html.twig', array(
