@@ -15,7 +15,7 @@
         <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
     {% endblock %}
 </head>
-<body>
+<body data-user="{{ app.user }}">
 <header>
     <ul class="nav nav-justified navbar-primary">
         {% if app.user %}

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var $user = $('body').data('user');
+
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -33,7 +35,9 @@ $(document).ready(function() {
         },
 
         eventClick: function(calEvent) {
-            window.location = Routing.generate('events') + calEvent.id + '/edit';
+            if ( $user == calEvent.user ) {
+                window.location = Routing.generate('events') + calEvent.id + '/edit';
+            }
         }
     });
 
