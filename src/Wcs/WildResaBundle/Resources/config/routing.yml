@@ -13,7 +13,7 @@ wcs_wild_resa_calendar:
 
 wcs_wild_resa_homepage:
     path:     /
-    defaults: { _controller: SonataUserBundle:SecurityFOSUser1:login }
+    defaults: { _controller: WcsWildResaBundle:Default:index }
 
 eventsjson:
     path: /list_events
