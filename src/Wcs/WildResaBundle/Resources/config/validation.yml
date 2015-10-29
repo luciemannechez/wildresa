@@ -1,0 +1,7 @@
+# src/Wcs/WildResaBundle/Resources/config/validation.yml
+Wcs\WildResaBundle\Entity\Events:
+    properties:
+        machines:
+            - Count:
+                min: 1
+                minMessage: "You must specify at least one machine"

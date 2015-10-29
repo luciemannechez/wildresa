@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Events edit</h1>
+
+    {{ form(edit_form) }}
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('wcs_wild_resa_calendar') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/wcswildresa/js/checkboxes.js') }}"></script>
+{% endblock %}

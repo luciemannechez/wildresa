@@ -1,5 +1,10 @@
 Wcs\WildResaBundle\Entity\Machines:
     type: entity
+    manyToMany:
+        events:
+            targetEntity: Events
+            mappedBy: machines
+
     table: null
     repositoryClass: Wcs\WildResaBundle\Entity\MachinesRepository
     id:
