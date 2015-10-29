@@ -21,8 +21,8 @@ class EventsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('start', 'datetime', array('disabled' => true))
-            ->add('end', 'datetime', array( 'disabled' => true, 'attr' => array('class' => 'endDate')))
+            ->add('start', 'datetime')
+            ->add('end', 'datetime', array(  'attr' => array('class' => 'endDate')))
             ->add('machines', 'entity', array(
                 'class' => 'Wcs\WildResaBundle\Entity\Machines',
                 'multiple' => true,
