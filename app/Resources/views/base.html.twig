@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Machine à laver{% endblock %}</title>
+    {% block stylesheets %}
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-            <!-- Optional theme -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        {% endblock %}
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/fullcalendar.css') }}"type="text/css"/>
+        <link rel="stylesheet" href="{{ asset('bundles/wcswildresa/css/style.css') }}"type="text/css"/>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+        <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
+    {% endblock %}
+</head>
+<body data-user="{{ app.user }}">
+<header>
+    <ul class="nav nav-justified navbar-primary">
+        {% if app.user %}
+            <li><a href="{{ path('sonata_user_profile_edit') }}">Profile</a></li>
+            <li><a href="{{ path('wcs_wild_resa_calendar') }}">Calendar</a></li>
+            <li><a href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ path('homepage') }}">WildResa</a></li>
+            <li><a href="{{ path('sonata_user_security_login') }}">Login</a></li>
+        {% endif %}
+    </ul>
+</header>
+
+<div class="container">
+    <div class="row">
+
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</div>
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    <script src="{{ asset('bundles/wcswildresa/js/moment.min.js') }}"></script>
+    <script src="{{ asset('bundles/wcswildresa/js/fullcalendar.js') }}"></script>
+    <script src="{{ asset('bundles/wcswildresa/js/calendar.js') }}"></script>
+{% endblock %}
+</body>
 </html>

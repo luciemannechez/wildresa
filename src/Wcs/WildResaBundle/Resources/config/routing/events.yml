@@ -1,0 +1,30 @@
+events:
+    path:     /
+    defaults: { _controller: "WcsWildResaBundle:Events:index" }
+
+events_show:
+    path:     /{id}/show
+    defaults: { _controller: "WcsWildResaBundle:Events:show" }
+
+events_new:
+    path:     /{start}/new
+    defaults: { _controller: "WcsWildResaBundle:Events:new" }
+
+events_create:
+    path:     /create
+    defaults: { _controller: "WcsWildResaBundle:Events:create" }
+    methods:  POST
+
+events_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WcsWildResaBundle:Events:edit" }
+
+events_update:
+    path:     /{id}/update
+    defaults: { _controller: "WcsWildResaBundle:Events:update" }
+    methods:  [POST, PUT]
+
+events_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WcsWildResaBundle:Events:delete" }
+    methods:  [POST, DELETE]

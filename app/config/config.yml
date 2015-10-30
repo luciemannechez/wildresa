@@ -17,7 +17,6 @@ framework:
         strict_requirements: ~
     form:            ~
     csrf_protection: ~
-    validation:      { enable_annotations: true }
     #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
@@ -30,6 +29,8 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    serializer:
+        enabled: true
 
 # Twig Configuration
 twig:
@@ -105,16 +106,18 @@ sonata_user:
 
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               sonata_user_profile
+            type:               application_sonata_user_profile
             handler:            sonata.user.profile.form.handler.default
             name:               sonata_user_profile_form
             validation_groups:  [Profile]
+    admin:
+        user:
+            class:      Application\Sonata\UserBundle\Admin\Model\UserAdmin
 
 fos_user:
     db_driver:      orm # can be orm or odm
     firewall_name:  main
     user_class:     Application\Sonata\UserBundle\Entity\User
-
 
     group:
         group_class:   Application\Sonata\UserBundle\Entity\Group
@@ -123,13 +126,6 @@ fos_user:
     service:
         user_manager: sonata.user.orm.user_manager
 
-
-    profile:  # Authentication Form
-        form:
-            type:               fos_user_profile
-            handler:            fos_user.profile.form.handler.default
-            name:               fos_user_profile_form
-            validation_groups:  [Authentication]
 mopa_bootstrap:
     form:
         show_legend: false # default is true
@@ -137,3 +133,6 @@ mopa_bootstrap:
         error_type: block # or inline which is default
     menu:
         template: MyBundles:Menu:template.html.twig
+
+fos_js_routing:
+    routes_to_expose: [ (.*) ]

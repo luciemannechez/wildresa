@@ -1,3 +1,20 @@
+wcs_wild_resa_events:
+    resource: "@WcsWildResaBundle/Resources/config/routing/events.yml"
+    prefix:   /events
+
+#Wcs_wild_resa_homepage:
+#   path:     /hello/{name}
+#   defaults: { _controller: WcsWildResaBundle:Default:index }
+#
+
+wcs_wild_resa_calendar:
+    path:     /calendar
+    defaults: { _controller: WcsWildResaBundle:Calendar:index }
+
 wcs_wild_resa_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: WcsWildResaBundle:Default:index }
+
+eventsjson:
+    path: /list_events
+    defaults: { _controller: WcsWildResaBundle:Calendar:events }
