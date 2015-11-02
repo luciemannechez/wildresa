@@ -33,6 +33,7 @@ Pour accéder à l'administration "/admin"
 ##Contribuer
 
 Les bonnes pratiques à respecter sont celles définies par sensiolabs dans le document suivant [http://symfony.com/doc/current/best_practices/index.html][1]
+
 Les config de doctrine, des services et des validations sont en YAML.
 
 [1]:  http://symfony.com/doc/current/best_practices/index.html
