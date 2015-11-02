@@ -175,4 +175,33 @@ class Events
         return $this->user;
     }
 
+    /**
+     * @var string
+     */
+    private $backgroundColor = "#000";
+
+
+    /**
+     * Set backgroundColor
+     *
+     * @param string $backgroundColor
+     *
+     * @return Events
+     */
+    public function setBackgroundColor($backgroundColor)
+    {
+        $this->backgroundColor = $backgroundColor;
+
+        return $this;
+    }
+
+    /**
+     * Get backgroundColor
+     *
+     * @return string
+     */
+    public function getBackgroundColor()
+    {
+        return $this->backgroundColor;
+    }
 }
