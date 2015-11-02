@@ -28,6 +28,18 @@ Pour créer un administrateur : php app/console fos:user:create --super-admin
 
 Pour accéder à l'administration "/admin"
 
+##Installer un bundle
+
+
+Executer la commande : 
+
+php app/console doctrine:generate:bundle
+
+
+
+
+
+
 
 
 
