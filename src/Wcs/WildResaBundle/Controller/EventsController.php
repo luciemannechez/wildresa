@@ -45,6 +45,14 @@ class EventsController extends Controller
             $user = $this->container->get('security.token_storage')->getToken()->getUser();
             $entity->setUser($user);
 
+            if ( $user == "Jérôme" ) {
+                $entity->setBackgroundColor("red");
+            }
+
+            else if ( $user == "Lucie") {
+                $entity->setBackgroundColor("orange");
+            }
+
             $em->persist($entity);
             $em->flush();
 

@@ -2151,16 +2151,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "2.3.6",
+            "version": "2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "1dfcfcf8650e8d8c4a4400b9525b2097110f1f11"
+                "reference": "41efdd80e18abd793fe4d1d7d936b2d5f5d8d6d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/1dfcfcf8650e8d8c4a4400b9525b2097110f1f11",
-                "reference": "1dfcfcf8650e8d8c4a4400b9525b2097110f1f11",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/41efdd80e18abd793fe4d1d7d936b2d5f5d8d6d8",
+                "reference": "41efdd80e18abd793fe4d1d7d936b2d5f5d8d6d8",
                 "shasum": ""
             },
             "require": {
@@ -2232,7 +2232,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2015-09-10 19:16:15"
+            "time": "2015-10-27 07:29:41"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -3153,12 +3153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "2261427a2fbb4407529304cdb9231d9d6b1bafe8"
+                "reference": "80cd128843f46a6371627581a8458e289427e269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/2261427a2fbb4407529304cdb9231d9d6b1bafe8",
-                "reference": "2261427a2fbb4407529304cdb9231d9d6b1bafe8",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/80cd128843f46a6371627581a8458e289427e269",
+                "reference": "80cd128843f46a6371627581a8458e289427e269",
                 "shasum": ""
             },
             "replace": {
@@ -3196,7 +3196,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2015-10-28 20:04:53"
+            "time": "2015-11-02 05:16:06"
         },
         {
             "name": "twig/extensions",
@@ -3252,16 +3252,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.22.3",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ebfc36b7e77b0c1175afe30459cf943010245540"
+                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ebfc36b7e77b0c1175afe30459cf943010245540",
-                "reference": "ebfc36b7e77b0c1175afe30459cf943010245540",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5868cd822fd6cf626d5f805439575f9c323cee2a",
+                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a",
                 "shasum": ""
             },
             "require": {
@@ -3274,7 +3274,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.22-dev"
+                    "dev-master": "1.23-dev"
                 }
             },
             "autoload": {
@@ -3309,7 +3309,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-10-13 07:07:02"
+            "time": "2015-10-29 23:29:01"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
