@@ -5,7 +5,7 @@ wildresa
 Une application permettant de réserver la machine à laver et le sèche linge de la Wild Code School
 
 
-**Installation
+##Installation
 
 
 Cloner le projet puis positionnez-vous dans le dossier du projet.
@@ -21,7 +21,7 @@ Exécutez ces commandes :
 2. php app/console doctrine:schema:update
 
 
-**Configuration
+##Configuration
 
 
 Pour créer un administrateur : php app/console fos:user:create --super-admin
@@ -31,5 +31,3 @@ Pour accéder à l'administration "/admin"
 
 
 
-A Symfony project created on October 13, 2015, 7:53 pm.
-Project washing machine of Wild School Code
