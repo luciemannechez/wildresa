@@ -15,7 +15,7 @@
         <script src="{{ asset('bundles/wcswildresa/js/jquery-1.11.3.min.js') }}"></script>
     {% endblock %}
 </head>
-<body data-user="{{ app.user }}">
+<body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
 <header>
     <ul class="nav nav-justified navbar-primary">
         {% if app.user %}

@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    var $user = $('body').data('user');
+    var $user = $('body').data('user'),
+        $admin = $('body').attr('class');
 
     $('#calendar').fullCalendar({
         header: {
@@ -35,7 +36,7 @@ $(document).ready(function() {
         },
 
         eventClick: function(calEvent) {
-                if ($user == calEvent.user || $user == 'admin') {
+                if ($user == calEvent.user || $admin == 'admin') {
                     window.location = Routing.generate('events') + calEvent.id + '/edit';
                 }
         }
