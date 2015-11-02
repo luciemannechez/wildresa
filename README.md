@@ -35,6 +35,8 @@ Executer la commande :
 
 php app/console doctrine:generate:bundle
 
+Ensuite verifier que le bundle est bien généré dans le Appkernel.php
+
 
 
 
