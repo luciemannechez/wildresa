@@ -16,10 +16,12 @@ Dans le dossier app, dupliquez le fichier parameters.yml.dist dans un fichier pa
 
 Exécutez ces commandes :
 
-1. composer install
+    composer install
+    
+##Création de la base de données
 
-2. php app/console doctrine:schema:update
-
+    php app/console doctrine:database:create
+    php app/console doctrine:schema:update --force
 
 ##Configuration
 
@@ -28,14 +30,14 @@ Pour créer un administrateur : php app/console fos:user:create --super-admin
 
 Pour accéder à l'administration "/admin"
 
-##Installer un bundle
+##Contribuer
+
+Les bonnes pratiques à respecter sont celles définies par sensiolabs dans le document suivant [http://symfony.com/doc/current/best_practices/index.html][1]
+Les config de doctrine, des services et des validations sont en YAML.
+
+[1]:  http://symfony.com/doc/current/best_practices/index.html
 
 
-Executer la commande : 
-
-php app/console doctrine:generate:bundle
-
-Ensuite verifier que le bundle est bien généré dans le Appkernel.php
 
 
 
