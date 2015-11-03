@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Wcs\WildResaBundle\Entity\Events;
-use Wcs\WildResaBundle\Form\EventsType;
+use Wcs\WildResaBundle\Form\Type\EventsType;
 
 /**
  * Events controller.
@@ -169,7 +169,6 @@ class EventsController extends Controller
 
         $form->add('submit', 'submit', array('label' => 'Update'));
 
-        return $form;
         return $form;
     }
     /**

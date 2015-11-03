@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Wcs\WildResaBundle\Entity\Events;
-use Wcs\WildResaBundle\Entity\Machines;
 
 
 class CalendarController extends Controller

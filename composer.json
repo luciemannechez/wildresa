@@ -23,7 +23,7 @@
         "sonata-project/doctrine-orm-admin-bundle": "^2.3",
         "sonata-project/easy-extends-bundle": "^2.1",
         "sonata-project/user-bundle": "^2.2",
-        "mopa/bootstrap-bundle": "dev-master",
+        "mopa/bootstrap-bundle": "v3.0.0-RC2",
         "twbs/bootstrap": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
         "craue/formflow-bundle": "dev-master",
