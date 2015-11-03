@@ -1,5 +1,6 @@
 {
     "name": "mahamadou/wildresa",
+    "description":"réservation machines",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -22,10 +23,12 @@
         "sonata-project/doctrine-orm-admin-bundle": "^2.3",
         "sonata-project/easy-extends-bundle": "^2.1",
         "sonata-project/user-bundle": "^2.2",
-        "mopa/bootstrap-bundle": "dev-master",
+
+        "mopa/bootstrap-bundle": "v3.0.0-RC2",
         "twbs/bootstrap": "v4.0.0-alpha",
         "knplabs/knp-paginator-bundle": "2.5.0",
         "craue/formflow-bundle": "2.1.8",
+
         "knplabs/knp-menu-bundle": "~1.1",
         "adesigns/calendar-bundle": "1.2-beta",
         "friendsofsymfony/jsrouting-bundle": "^1.5",

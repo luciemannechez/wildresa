@@ -16,7 +16,7 @@ $(document).ready(function() {
         aspectRatio: 2,
         eventOverlap: false,
 
-        events: Routing.generate('eventsjson'),
+        events: Routing.generate('events'),
 
         eventRender: function(event, element) {
             element.each(function() {

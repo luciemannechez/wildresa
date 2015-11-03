@@ -10,4 +10,7 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class EventsRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findbyperiod($start, $end){
+
+    }
 }

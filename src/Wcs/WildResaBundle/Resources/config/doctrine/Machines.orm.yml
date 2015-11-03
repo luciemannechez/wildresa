@@ -5,7 +5,7 @@ Wcs\WildResaBundle\Entity\Machines:
             targetEntity: Events
             mappedBy: machines
 
-    table: null
+
     repositoryClass: Wcs\WildResaBundle\Entity\MachinesRepository
     id:
         id:

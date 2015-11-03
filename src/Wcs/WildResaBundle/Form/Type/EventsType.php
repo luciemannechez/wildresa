@@ -1,6 +1,6 @@
 <?php
 
-namespace Wcs\WildResaBundle\Form;
+namespace Wcs\WildResaBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

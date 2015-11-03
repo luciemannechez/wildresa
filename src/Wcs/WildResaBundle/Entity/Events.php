@@ -7,6 +7,16 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class Events
 {
+    /**
+     * @return string
+     */
+
+    public function __toString() {
+        return $this->machines;
+    }
+
+
+    //GENERATED CODE
 
     /**
      * @var integer
@@ -142,9 +152,7 @@ class Events
         return $this;
     }
 
-    public function __toString() {
-        return $this->machines;
-    }
+
     /**
      * @var string
      */

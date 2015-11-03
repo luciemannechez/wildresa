@@ -15,6 +15,3 @@ wcs_wild_resa_homepage:
     path:     /
     defaults: { _controller: WcsWildResaBundle:Default:index }
 
-eventsjson:
-    path: /list_events
-    defaults: { _controller: WcsWildResaBundle:Calendar:events }

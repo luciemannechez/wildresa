@@ -6,7 +6,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Wcs\WildResaBundle\Entity\Events;
-use Wcs\WildResaBundle\Form\EventsType;
+use Wcs\WildResaBundle\Form\Type\EventsType;
+
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Events controller.
@@ -16,8 +22,8 @@ class EventsController extends Controller
 {
 
     /**
-     * Lists all Events entities.
-     *
+     * Cette action permet de retourner les évenements en Json
+     * @return Response
      */
     public function indexAction()
     {
@@ -25,10 +31,34 @@ class EventsController extends Controller
 
         $entities = $em->getRepository('WcsWildResaBundle:Events')->findAll();
 
-        return $this->render('WcsWildResaBundle:Events:index.html.twig', array(
-            'entities' => $entities,
-        ));
+        $normalizer = new ObjectNormalizer();
+
+        $encoder = new JsonEncoder();
+
+        $dateCallback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format(\DateTime::ISO8601)
+                : '';
+        };
+
+        // ne conserver que le type de la machine
+        $machineCallback = function ($machines) {
+            $result = [];
+            foreach ($machines as $mach)
+            {
+                $result[] = $mach->getTypeMachine();
+            }
+            return $result;
+        };
+
+        $normalizer->setCallbacks(array('start' => $dateCallback, 'end' => $dateCallback, 'machines' => $machineCallback));
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+        $jsonObject = $serializer->serialize($entities, 'json');
+
+        return new Response($jsonObject);
     }
+
     /**
      * Creates a new Events entity.
      *
@@ -169,7 +199,6 @@ class EventsController extends Controller
 
         $form->add('submit', 'submit', array('label' => 'Update'));
 
-        return $form;
         return $form;
     }
     /**
