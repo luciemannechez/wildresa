@@ -6,7 +6,7 @@ Wcs\WildResaBundle\Entity\Machines:
             mappedBy: machines
 
 
-    repositoryClass: Wcs\WildResaBundle\Entity\MachinesRepository
+
     id:
         id:
             type: integer
