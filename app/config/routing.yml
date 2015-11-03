@@ -2,10 +2,6 @@ wcs_wild_resa:
     resource: "@WcsWildResaBundle/Resources/config/routing.yml"
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-
 # Route ajoutee pour SonataAdminBundle
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'

@@ -1,5 +1,6 @@
 {
     "name": "mahamadou/wildresa",
+    "description":"réservation machines",
     "license": "proprietary",
     "type": "project",
     "autoload": {
