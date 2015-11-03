@@ -7,6 +7,11 @@ namespace Wcs\WildResaBundle\Entity;
  */
 class Machines
 {
+
+    public function __toString() {
+        return $this->typeMachine;
+    }
+
     /**
      * @var integer
      */
@@ -98,7 +103,5 @@ class Machines
         return $this->events;
     }
 
-    public function __toString() {
-        return $this->typeMachine;
-    }
+
 }
