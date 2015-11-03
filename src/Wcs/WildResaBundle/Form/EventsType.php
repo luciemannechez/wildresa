@@ -5,12 +5,7 @@ namespace Wcs\WildResaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Symfony\Component\Validator\Constraints\IsTrue;
-use Symfony\Component\Validator\Constraints\IsTrueValidator;
-use Symfony\Component\Validator\Constraints\NotNull;
-use Symfony\Component\Validator\Constraints\True;
-use Wcs\WildResaBundle\Entity\Machines;
-use Application\Sonata\UserBundle\Entity\User;
+
 
 class EventsType extends AbstractType
 {
